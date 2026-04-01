@@ -39,7 +39,8 @@
               </div>
             </template>
           </v-card>
-
+          
+          <VuetifyTest />
         </v-col>
 
         <v-col v-for="link in links" :key="link.href" cols="6">
