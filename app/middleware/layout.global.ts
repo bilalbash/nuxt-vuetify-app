@@ -1,15 +1,8 @@
-import { setPageLayout } from '#app'
-
 export default defineNuxtRouteMiddleware((to) => {
-  if (to.path.startsWith('/users')) {
-    setPageLayout('users')
-    return
-  }
+  const layout =
+    to.path.startsWith('/users') ? 'users'
+      : to.path.startsWith('/admin') ? 'admin'
+        : 'default'
 
-  if (to.path.startsWith('/admin')) {
-    setPageLayout('admin')
-    return
-  }
-
-  setPageLayout('default')
+  setPageLayout(layout)
 })
