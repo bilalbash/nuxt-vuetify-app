@@ -1,3 +1,6 @@
+
 <template>
-  <HelloWorld />
+  <div>
+    <HelloWorld />
+  </div>
 </template>
