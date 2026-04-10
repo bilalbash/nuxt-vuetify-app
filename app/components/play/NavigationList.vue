@@ -1,43 +1,25 @@
 <template>
-  <v-list open-strategy="single">
+  <v-list>
     <v-list-item
       title="Play Home"
       to="/play" 
       class="play-nav-item" 
       color="primary"
     />
+    <v-divider class="my-2" />
 
-    <v-list-group
+    <v-list-item
       v-for="section in playSections"
       :key="section.slug"
-      :value="section.slug"
+      :subtitle="section.pages.length + ' pages'"
+      class="play-nav-item"
+      :to="'/play/' + section.slug"
+      color="primary"
     >
-      <template #activator="{ props }">
-        <v-list-item v-bind="props" class="play-nav-item" color="primary">
-          <template #title>
-            <span>{{ section.title }}</span>
-          </template>
-        </v-list-item>
+      <template #title>
+        <span>{{ section.title }}</span>
       </template>
-
-      <v-list-item class="play-nav-item" :to="'/play/' + section.slug" color="primary">
-        <template #title>
-          <span >Overview</span>
-        </template>
-      </v-list-item>
-
-      <v-list-item
-        v-for="page in section.pages"
-        :key="page.slug"
-        class="play-nav-item"
-        :to="'/play/' + section.slug + '/' + page.slug"
-        color="primary"
-      >
-        <template #title>
-          <span >{{ page.title }}</span>
-        </template>
-      </v-list-item>
-    </v-list-group>
+    </v-list-item>
   </v-list>
 </template>
 
@@ -51,5 +33,9 @@ import { playSections } from '~/data/playSections'
   padding-top: 2px;
   padding-bottom: 2px;
   
+}
+
+:deep(.v-list-item-subtitle) {
+  font-size: 0.75rem;
 }
 </style>
