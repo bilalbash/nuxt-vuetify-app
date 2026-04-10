@@ -40,10 +40,15 @@
             </template>
           </v-card>
 
-          <VuetifyTest />
         </v-col>
-
       </v-row>
+      
     </div>
+    <v-btn
+      color="green"
+      size="x-large"
+      text="Play here"
+      to="/play"
+    ></v-btn>
   </v-container>
 </template>

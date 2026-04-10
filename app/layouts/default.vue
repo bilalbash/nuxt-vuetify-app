@@ -3,7 +3,7 @@
     <LayoutsDefaultNavigation />
 
     <v-main>
-      <v-container class="py-8">
+      <v-container>
         <slot />
       </v-container>
     </v-main>
