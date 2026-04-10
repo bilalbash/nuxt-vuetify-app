@@ -2,7 +2,8 @@ export default defineNuxtRouteMiddleware((to) => {
   const layout =
     to.path.startsWith('/users') ? 'users'
       : to.path.startsWith('/admin') ? 'admin'
-        : 'default'
+        : to.path.startsWith('/play') ? 'play'
+          : 'default'
 
   setPageLayout(layout)
 })
