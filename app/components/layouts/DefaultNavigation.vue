@@ -1,28 +1,3 @@
-<script setup lang="ts">
-const drawer = ref(false)
-
-const menuItems = [
-  {
-    icon: 'mdi-home-outline',
-    subtitle: 'Default layout',
-    title: 'Home',
-    to: '/',
-  },
-  {
-    icon: 'mdi-account-group-outline',
-    subtitle: 'Users layout',
-    title: 'Users',
-    to: '/users',
-  },
-  {
-    icon: 'mdi-shield-crown-outline',
-    subtitle: 'Admin layout',
-    title: 'Admin',
-    to: '/admin',
-  },
-]
-</script>
-
 <template>
   <v-app-bar color="surface" elevation="4">
     <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -52,3 +27,28 @@ const menuItems = [
     </v-list>
   </v-navigation-drawer>
 </template>
+
+<script setup lang="ts">
+const drawer = ref(false)
+
+const menuItems = [
+  {
+    icon: 'mdi-home-outline',
+    subtitle: 'Default layout',
+    title: 'Home',
+    to: '/',
+  },
+  {
+    icon: 'mdi-account-group-outline',
+    subtitle: 'Users layout',
+    title: 'Users',
+    to: '/users',
+  },
+  {
+    icon: 'mdi-shield-crown-outline',
+    subtitle: 'Admin layout',
+    title: 'Admin',
+    to: '/admin',
+  },
+]
+</script>
