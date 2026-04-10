@@ -10,7 +10,7 @@
           </v-col>
 
           <v-col md="12" lg="8">
-            <v-toolbar density="compact" flat>
+            <v-toolbar density="compact">
               <v-app-bar-nav-icon class="d-lg-none" @click="drawer = !drawer" />
               <PlayBreadcrumbs />
             </v-toolbar>
