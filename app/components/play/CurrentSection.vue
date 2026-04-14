@@ -1,18 +1,20 @@
 <template>
-    <v-card  variant="text" rounded="0" color="primary"> 
-      <v-card-title>{{ currentSection?.title || 'Current Section' }}</v-card-title>
-      <v-card-subtitle v-if="currentSection?.title"> 
-        {{ currentSection?.pages.length }} pages
-      </v-card-subtitle>
-      <v-card-text v-if="!currentSection?.title">
+    <v-card v-if="!currentSection?.title" variant="tonal" rounded="0" color="primary"> 
+      <v-card-title>Current Section</v-card-title>
+      <v-card-text>
         Select a section from left menu.
       </v-card-text>
     </v-card>
     
     <v-list v-if="currentSection?.title" density="compact">
-      <v-divider  />
+
       <v-list-item
-        class="play-nav-item"
+        :title="currentSection?.title"
+        :subtitle="currentSection?.pages.length + ' pages'"
+      />
+      <v-divider class="my-2" />
+
+      <v-list-item
         :to="'/play/' + currentSection.slug"
         color="primary"
         title="Overview"
@@ -23,7 +25,6 @@
         :key="page.slug"
         :title="`${index + 1}. ${page.title}`"
         :to="`/play/${currentSection.slug}/${page.slug}`"
-        class="play-nav-item"
         color="primary"
       />
     </v-list>
@@ -45,7 +46,7 @@ const currentSection = computed(() => {
 
 
 <style scoped>
-.play-nav-item {
+.v-list-item {
   min-height: 32px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -58,5 +59,13 @@ const currentSection = computed(() => {
 .v-card-title {
   overflow: visible;
   text-wrap: auto;
+}
+
+.v-list {
+  min-height: stretch;
+}
+
+:deep(.v-list-item-subtitle) {
+  font-size: 0.75rem;
 }
 </style>

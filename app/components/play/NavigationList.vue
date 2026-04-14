@@ -2,9 +2,7 @@
   <v-list>
     <v-list-item
       title="Play Home"
-      to="/play" 
-      class="play-nav-item" 
-      color="primary"
+      to="/play"
     />
     <v-divider class="my-2" />
 
@@ -12,7 +10,6 @@
       v-for="section in playSections"
       :key="section.slug"
       :subtitle="section.pages.length + ' pages'"
-      class="play-nav-item"
       :to="'/play/' + section.slug"
       color="primary"
     >
@@ -28,11 +25,10 @@ import { playSections } from '~/data/playSections'
 </script>
 
 <style scoped>
-.play-nav-item {
+.v-list-item {
   min-height: 32px;
   padding-top: 2px;
   padding-bottom: 2px;
-  
 }
 
 :deep(.v-list-item-subtitle) {
