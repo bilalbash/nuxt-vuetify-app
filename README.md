@@ -9,6 +9,10 @@ thats how i created it:
 pnpm create vuetify --platform=nuxt
 ```
 
+
+i followed the following flow for creating this application:
+
+```bash
   `$$$$$$$$$ii$$$`  .;T$$$$$$$$$:`
     T$$$$$$i$$$$`  .$$$l$$$$$$$: 
      T$$$$ii$$$`  .$$$$ll$$$$$:  
@@ -57,6 +61,9 @@ pnpm create vuetify --platform=nuxt
 │  cd task-journal-vuetify                                                 
 │  npm run dev                                                     
 
+```
+
+than ran the following commands to run the applicaiton in dev mode.
 
 ```bash
 nuxt-apps %  cd task-journal-vuetify 
@@ -70,16 +77,11 @@ but if you enable it than the componant that cause the issue of ssr ,
 you rap it with this <v-no-ssr></v-no-ssr> . sometimes you have to 
 rap it with <ClientOnly></ClientOnly>
 
-## ❗️ Documentation
-
-- Primary docs: https://vuetifyjs.com/
-- Getting started guide: https://vuetifyjs.com/en/getting-started/installation/
-- Community support: https://community.vuetifyjs.com/
-- Issue tracker: https://issues.vuetifyjs.com/
 
 ## 🧱 Stack
 
-- Framework: Nuxt 4
+- Framework: Nuxt 4 
+- node 24.13.1
 - UI Library: Vuetify
 - Language: TypeScript
 - Package manager: npm
@@ -87,7 +89,8 @@ rap it with <ClientOnly></ClientOnly>
 ## 🧭 Start Here
 
 - Main entry: `app/app.vue`
-- Main app component: `app/app.vue`
+- Main app landing page '/': `app/pages/index.vue`
+- Main app component: `app/components/HelloWorld.vue`
 - Main styles: `app/assets/styles/`
 - Plugin setup: `app/plugins/`
 
