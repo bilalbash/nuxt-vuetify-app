@@ -74,8 +74,8 @@ task-journal-vuetify % npm run dev
 i disabled ssr so that the application works.
 
 but if you enable it than the componant that cause the issue of ssr ,
-you rap it with this <v-no-ssr></v-no-ssr> . sometimes you have to 
-rap it with <ClientOnly></ClientOnly>
+you rap it with this `<v-no-ssr></v-no-ssr>` . sometimes you have to 
+rap it with `<ClientOnly></ClientOnly>`
 
 
 ## 🧱 Stack
